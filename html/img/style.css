@@ -6,11 +6,15 @@
     padding: 20px;
     color: #7C7C7C;
 }
+span {
+    color: #38ADA9;
+    cursor: pointer;
+}
 .nav {
-    display: flex;
+    display: block;
     overflow: hidden;
     position: absolute;
-    left: 40%;
+    left: 35%;
 }
 ul {
     display: inline;
@@ -29,13 +33,11 @@ ul {
     color: white;
     background-color: #38ADA9;
     padding: 10px 20px;
-    display: block;
+    display: inline-block;
     font-size: 12px;
     border-radius: 22px;
     border: 1px solid #38ADA9;
     cursor: pointer;
-    float: right;
-    margin-right: 60px;
 }
 .btn2 {
     text-decoration: none;
@@ -169,16 +171,8 @@ li {
     color: #7C7C7C;
     font-size: 14px;
 }
-.togglearea {
-    border-bottom: 2px solid #38ADA9;
-    padding: 10px;
-    color: #5C5C5C;
-    float: right;
-}
-.togglearea label {
-    color: #38ADA9;
-    width: 45px;
-    height: 45px;
+.dropdown {
+    display: none;
 }
 @media (max-width: 900px) {
     .column {
@@ -195,18 +189,63 @@ li {
     }
 }
 @media screen and (max-width: 700px) {
+    .nav {   
+     display: none;
+    }
     .column {
      flex: 100%;
      max-width: 100%;
     }
-}
-@media (max-width: 1200px) {
-    .nav {
-        flex-direction: column;
+    .dropdown{
+        position: absolute;
+        display: inline-block;
+        font-size: 16px;
+        color: white;
+        margin-left: 80px;
+        margin-top: 10px;
     }
-    .nav a {
-        display: block;
-        font-size: 30px;
+    input[type=checkbox]{
+        display: none;
+    }
+    label{
+        box-sizing: border-box;
+        border-radius: 14px;
+        display: inline-block;
+        width: 100%;
+        background-color: #38ADA9;
+        padding: 10px 50px;
+        cursor: pointer;
         text-align: center;
+    }
+    .list {
+        position: relative;
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+        margin:0;
+        padding:0;
+        box-shadow: 0px 1px 1px #38ADA9;
+        display: none;
+    }
+    .list li{
+        padding: 15px;
+        background-color: #fff;
+        color: #38ADA9;
+        cursor: pointer;
+    }
+    .list li a{
+        color: inherit;
+        text-decoration: none;
+    }
+    input[type=checkbox]:checked ~ label {
+        background-color: #38ADA9;
+    }
+    input[type=checkbox]:checked ~ ul {
+        display: block;
+    }
+    .p1 {
+        display: block;
+        color: #38ADA9;
     }
 }
