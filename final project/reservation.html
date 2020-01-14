@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="Annotation.png" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+	<title>	Reservation</title>
+	<style type="text/css">
+		body{background-color: white;
+			}
+
+        .div-all{
+  height: 700px;
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 56px;
+  margin-bottom: 16px;
+  background-color:#F2F2F2 ;
+  font-size: 25px;
+
+ 
+
+        }
+       input[type=text], select, textarea {
+             
+        	width: 100%;height: 40px;font-size: 16px;border-radius: 8px;border-style: ridge;margin: 8px 8px 8px 0px;
+        }
+        input[type=password] {
+             
+        	width: 100%;height: 40px;font-size: 16px;border-radius: 8px;border-style: ridge;margin: 8px 8px 8px 0px;
+        }
+        input[type=date]{
+        	width: 100%;height: 40px;font-size: 16px;border-radius: 8px;border-style: ridge;margin: 8px 8px 8px 0px;
+
+        }
+        label{
+           font-size:16px;font-family: Poppins Regular; font-style: italic; float: left; padding-left: 12px;font-weight:bolder;
+        }
+		.button1{
+			background-color:#38ADA9;border-radius:4px;width: 150px;height: 40px;border:none;color: white;margin-left: 300px;
+
+		}
+		 #subject{
+			height: 200px;
+			width: 300px;
+		}
+		#adress{
+			height: 100px;
+		}
+
+		@media screen and (max-width: 767px){
+			#content-div2{
+				display: list-item !important;
+				width: 80% !important;
+				list-style: none !important;
+				
+				
+						}
+			button{
+				width:99%;
+				
+				
+			}
+			h1{
+				padding-left: 70px !important;
+			}
+			.inpp{
+				
+				background-color: transparent !important;
+				padding: 0px !important;
+				margin: 0px !important;
+				text-align: left !important;
+				
+				
+			
+			}
+		}
+		.button1:hover {
+  background-color: #1D1E1E;
+}
+
+		
+
+
+		@media screen and (max-width: 767px){
+			#div-global{
+				display: list-item !important;
+
+			}
+			#content-div1{
+				width: 90% !important;
+				margin: -12px;
+				padding-left: 25px;
+
+
+			}
+			#content-div2{
+				width: 90% !important;
+				padding-left: 20px;
+
+			}
+			#div-name1{
+				display: list-item !important;	
+			}
+			#div-name1-div1{
+				width: 100% !important;
+
+			}
+			#div-name1-div2{
+				width: 100% !important;
+			}
+			#name-t{
+				width: 99% !important;
+			}
+			#prenom-t{
+				width: 99% !important;
+			}
+			.div1{
+				font-size: 0.7em !important;
+				left: 15% !important;
+			}
+
+			.button1{
+				width: 99% !important;
+			}
+/*************menu mobile************************/
+			#s1{
+				display: block;
+			}
+			#div-btn-img{
+				display: block;
+			}
+
+			
+		}
+		
+		@media screen and (max-width: 1060px){
+			#div-all{
+				display: none;
+			}
+			#div-all-header{
+				display: none;
+			}
+		}
+		
+
+		@media screen and (min-width: 1060px){
+			#s1{
+				display: none !important;
+			}
+			#div-btn-img{
+				display: none !important;
+			}
+			#divmenu{
+				display: none !important;
+			}
+
+		}
+
+
+.limenumobil{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	
+    padding-left: 7%;
+	text-align: left;
+
+}
+.limenumobil a p{
+	
+	font-family: Poppins Regular;
+	color: #707070;
+	width: 100%;
+
+	
+}
+.limenumobil a:hover p{
+	background-color: #38ADA9;;
+}
+
+
+
+a {
+	text-decoration: none !important;
+	font-size: 10px !important;
+}
+/**************fin menu mobile*************/
+
+		
+	</style>
+	<script type="text/javascript">
+		function valider(){
+			// *******nom******
+ 		var Nom= document.getElementById('name-t');
+   if ( Nom.value == "")
+   {
+      document.getElementById('spanNom').innerText="Le champs doit etre remplir";
+      document.getElementById('spanNom').style.color="red";
+   }
+   else
+   {
+    document.getElementById('spanNom').innerHTML="";
+   }
+           // *******prenom******
+       	var Prenom= document.getElementById('prenom-t');
+   if ( Nom.value == "")
+   {
+      document.getElementById('spanPrenom').innerText="Le champs doit etre remplir";
+      document.getElementById('spanPrenom').style.color="red";
+   }
+   else
+   {
+    document.getElementById('spanPrenom').innerHTML="";
+   }
+           // *******email******
+        var Email=document.getElementById('email-t');
+   if (Email.value=="")
+   {
+document.getElementById('spanEmail').innerText="Le champs doit etre remplir";
+document.getElementById('spanEmail').style.color="red";
+
+   }
+  else if (Email.value.indexOf('@')==-1)
+  {
+     document.getElementById('spanEmail').innerText="Erreur ";
+     document.getElementById('spanEmail').style.color="red";
+  }
+  else{
+      document.getElementById('spanEmail').innerHTML="";
+   }
+        // *******tele******
+    var telephone= document.getElementById('tel-t');
+    var a = /^(\+212)[5-7]{1}[0-9]{8}$/;
+  //var a = /^(\+212)+([5-7]{1})+([0-9]{8})$/;		
+  
+   if ( telephone.value == "")
+   {
+      document.getElementById('spanTel').innerText="Le champs doit etre remplir";
+      document.getElementById('spanTel').style.color="red";
+   }
+   else if (!a.test(telephone.value))
+   {
+      document.getElementById('spanTel').innerText="Erreur";
+       document.getElementById('spanTel').style.color="red";
+
+   }
+   else
+   {
+    document.getElementById('spanTel').innerHTML="";
+   }
+           // *******Adresse******
+           var adresse= document.getElementById('adress');
+   if ( adresse.value == "")
+   {
+      document.getElementById('spanAdresse').innerText="Le champs doit etre remplir";
+      document.getElementById('spanAdresse').style.color="red";
+   }
+   else
+   {
+    document.getElementById('spanAdresse').innerHTML="";
+   }
+     // *******numcarte******
+    var numcarte= document.getElementById('numcarte');
+    var a = /^[0-9]{20}$/;
+   if ( numcarte.value == "")
+   {
+      document.getElementById('spanNumCar').innerText="Le champs doit etre remplir";
+      document.getElementById('spanNumCar').style.color="red";
+   }
+   else if (!a.test(numcarte.value))
+   {
+      document.getElementById('spanNumCar').innerText="Erreur";
+      document.getElementById('spanNumCar').style.color="red";
+
+   }
+   else
+   {
+    document.getElementById('spanNumCar').innerHTML="";
+   }
+   // *******pass*****
+   
+   var pass= document.getElementById('passcarte');
+   if ( pass.value == "")
+   {
+      document.getElementById('spanpassCar').innerText="Le champs doit etre remplir";
+      document.getElementById('spanpassCar').style.color="red";
+   }
+   else
+   {
+    document.getElementById('spanNom').innerHTML="";
+   }
+
+
+}
+
+
+// menu mobile
+ 	function menu(){
+ 		var m = document.getElementById('divmenu');
+ 		
+ 		if (m.style.display=="none") {
+ 			m.style.display="block";
+ 		}
+ 		else if (m.style.display=="block"){
+ 			m.style.display="none";
+ 		}
+ 		
+ 	}
+ 	function show() {
+    var mobileMenu = document.getElementById("mobile-menu");
+
+    if (mobileMenu.style.display == "block") {
+        mobileMenu.style.display = "none";
+        mobileMenu.classList.toggle("block");
+    }else {
+        mobileMenu.style.display = "block";
+        mobileMenu.classList.toggle("block");
+    }
+}
+
+   
+	</script>
+
+</head>
+<body>
+	<!-- ************************menu debut ****************************************-->
+<header id="div-all-header">
+    <div class="header">
+        <p style="margin: 0px;display: inline;font-size: 12px;">Bienvenue dans notre entreprise de nettoyage</p>
+        <p class="p2" style="margin: 0px;display: inline; float: right;font-size: 12px;">Phone: <span>+1 342 422 9029</span> Email: <span>SalahNaoufalBouchra@company.com</span></p>
+    </div>
+</header>
+<body>
+    <div id="div-all">
+        <div>
+            <img class="fakeimg1" src="Annotation.png">
+            <ul class="nav" id="myTopnav">
+                <a href="CleaneLifeHome.html">Accueil</a>
+                <a href="About us.html">à propos de nous</a>
+                <a href="services.html">Services</a>
+                <a href="our works.html">Nos Travaux</a>
+                <a href="pricing.html">Prix</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+              <a href="reservation.html">  <button class="btn1">Demander un devis</button></a>
+            </ul>
+          
+        </div>
+    </div>
+ <section id="s1">
+ 	<div>
+ 		<center>
+ 			<p style="font-size: 10px;color: #707070;">Bienvenue dans notre entreprise de nettoyage</p>
+ 		</center>
+ 	</div>
+ 	<div style="display: flex;justify-content: space-between;  font-size: 10px;">
+ 		<p  style="padding-left: 15px; color: #707070;">Phone: <span style="color: #38ADA9;">+1 342 422 9029</span></p>
+ 		<p style="color: #707070;">Email: <span style="color: #38ADA9;">SalahNaoufalBouchra@company.com</span></p>
+ 	</div>
+ </section>
+ <section id="s2">
+ 	<div>
+ 		<div id="div-btn-img" style="display: flex;justify-content: space-between;">
+ 			<div>
+ 				<img class="fakeimg1" src="Annotation.png" style="width: 70px;height: 40px; float: left;position: absolute;">
+ 			</div>
+ 			<div>
+ 				
+ 				<a href="#" onclick="menu()" class="menu-icon" style="text-decoration: none;padding: 5px 10px; font-size: 16px !important;color:#707070; "> Menu  <i class="fa fa-bars"> </i></a>
+
+ 			</div>
+ 		</div>
+ 		<div id="divmenu" style="display: none;background-color: #FAFAFA">
+ 			<center>
+ 			<ul >
+		 		<li class="limenumobil" ><a href="CleaneLifeHome.html"><p>Accueil</p></a></li>
+		 		<li class="limenumobil" ><a href="About us.html"><p>à propos de nous</p></a></li>
+		 		<li class="limenumobil" ><a href="services.html"><p>Services</p></a></li>
+		 		<li class="limenumobil" ><a href="our works.html"><p>Nos Travaux</p></a></li>
+		 		<li class="limenumobil" ><a href="pricing.html"><p>Prix</p></a></li>
+		 		<li class="limenumobil" ><a href="blog.html"><p>Blog</p></a></li>
+		 		<li class="limenumobil" ><a href="contact.html"><p>Contact</p></a></li>
+		 		<li class="limenumobil" ><a href="reservation.html"><p>Demander un devis</p></a></li>
+		 	</ul>
+		 	</center>
+ 		</div>
+ 	</div>
+ </section>
+	<!--  ****************************fin menu**************************************  -->
+
+
+	 <section>
+	 	<div style="background-color:#FAFAFA;width: 100%;height: 120px;display: flex !important;justify-content: center;margin-top: 1%;">
+		<p style="font-size: 35px;font-family:satisfait;text-align: center;font-weight:bold;color: #38ADA9; ">Réservation</p>
+	</div >
+	 </section>
+
+<center>
+	<h1 style="/*float: left;padding-left: 33%; display: flex;*/">Form de réservation</h1>
+</center>
+<section>
+	<center>
+<div id="content-div2" style="width: 40%;margin-left: 5%;">
+
+		
+	
+				
+				<div id="div-g-name" style="margin: 110px 0px 60px 0px;">
+					<label  class="inpp"> Nom & Prenom</label>
+					<div id="div-name1" style="display: flex;width: 100%;">
+						<div id="div-name1-div1" style="width: 50%;">
+							<input id="name-t" type="text" name="" placeholder=" Taper vote Nom... "style="width: 95%;height: 40px;border-radius: 8px;border-style: ridge;font-size: 16px;margin: 8px 8px 8px 0px;"><br> 
+							<span id="spanNom"></span>
+						</div>
+						<div id="div-name1-div2" style="width: 50%;">
+							<input id="prenom-t" type="text" name="" placeholder=" Taper vote Prenom..." style="width: 95%;height: 40px;border-radius: 8px;border-style: ridge;font-size: 16px;margin: 8px 8px 8px 0px;"><br>
+							<span id="spanPrenom"></span>
+						</div>
+					</div>
+				</div>
+				<div id="div-g-email" style="margin: 60px 0px 60px 0px;">
+					<label class="inpp" >Email</label>
+					<div id="div-email" style="display: flex;width: 100%;">
+						<input id="email-t" type="text" name="" placeholder="Exemple@email.com" >
+						
+					</div><span id="spanEmail"></span>
+				</div>
+				<div id="div-g-tel"  style="margin: 60px 0px 60px 0px;">
+					<label class="inpp">Télephone</label>
+					<div id="div-tel" style="display: flex;width: 100%;">
+						<input id="tel-t" type="text" name="" placeholder="Exemple:212614868585" >
+						
+					</div><span id="spanTel"></span>
+				</div>
+				<div id="div-g-msg"  style="margin: 60px 0px 60px 0px;">
+					<label class="inpp" >Adresse</label>
+					<div id="div-adr" style="display: flex;width: 100%;">
+          
+             <textarea id="adress" name="adre" placeholder="Taper votre adresse.." ></textarea>
+					</div>	
+					<span id="spanAdresse"></span>
+				</div>
+				<div style="margin: 60px 0px 60px 0px;" > 
+					<label class="inpp" for="service" >Service</label> 
+   <select id="service"  name="service">
+    	
+    	
+      <option value="lavage des lavabos">Lavage des lavabos</option>
+      <option value="Nettoyage des facades">Nettoyage des facades</option>
+      <option value="Nettoyage du plan de travail">Nettoyage du plan de travail</option>
+      <option value="changement des services de toillettes">changement des services de toillettes</option>
+      <option value="Nettoyage des sanitaires">Nettoyage des sanitaires</option>
+    </select>
+    <span id="spanService"></span>
+</div>
+<div  style="margin: 60px 0px 60px 0px;" >
+	<label class="inpp" >Date</label>
+		<input type="date" name="time">
+	<span id="spanDate"></span>
+</div>
+<div style="margin: 60px 0px 60px 0px;" >
+ <FORM >
+  <FIELDSET align="left">
+    <legend><h3>Information de carte crédit</h3></legend>
+    <label class="inpp">Numéro Carte</label>
+    <INPUT TYPE="text" id="numcarte">
+<span id="spanNumCar"></span> <br><br>
+    <label class="inpp">Date d'expiration</label>
+    <INPUT TYPE="date" id="experation">
+    <span id="spanDateCar"></span> <br><br>
+    <label class="inpp">Mot de passe </label>
+    <INPUT TYPE="password" id="passcarte">
+    <span id="spanpassCar"></span> <br><br>
+    
+    <input   type="button" name="pay" value="Payer" style="background-color:#38ADA9;border-radius:4px;width: 150px;height: 40px;border:none;color: white " >
+  </FIELDSET>
+</FORM>
+</div>
+
+
+				
+
+				<div id="button"style="display: flex;width: 100%;justify-content: center !important;">
+					<center>
+						<button  class="button1" style="margin-left: 0px !important;" onclick="valider()" >Envoyer</button>
+					</center>
+				</div>
+
+			</div>
+	
+
+</center>
+</section>
+
+    <!-- footer -->
+	<div class="ft" style="margin-top: 100mm;">
+		<ul class="demo">
+			<h4>Aperçu rapide</h4>
+			<li><a href="CleaneLifeHome.html">Accueil</a></li>
+			<li><a href="About us.html">à propos de nous</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="our works.html">Nos Travaux</a></li>
+			<li><a href="pricing.html">Prix</a></li>
+			<li><a href="blog.html">Blogger</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<ul class="demo">
+			<h4>Services</h4>
+			<li><a href="services.html">Lavage des Lavabos</a></li>
+			<li><a href="services.html">Nettoyage des facades des ÉLements de cuisine</a></li>
+			<li><a href="services.html">Nettoyage de L'evier</a></li>
+			<li><a href="services.html">Nettoyage et désinfection des sanitaires</a></li>
+			<li><a href="services.html">Nettoyage du plan de travail</a></li>
+			<li><a href="services.html">Changement des serviettes de toilette</a></li>
+		</ul>
+		<ul class="demo">
+			<h4>Contacter Nous</h4>
+			<li>Télé: +212 614200838</li>
+			<li>Email: SalahNaoufalBouchra@company.com</li>
+			<li>Fax: +212 514200838</li>
+			<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/home" class="fa fa-twitter"></a>
+			<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+			<a href="https://www.linkedin.com/uas/login?trk=reset_password" class="fa fa-linkedin"></a>
+			<a href="https://www.youtube.com/results?search_query=hassan+boufaa" class="fa fa-youtube"></a>
+		</ul>
+	</div>
+	<!-- fin footer -->
+</body>
+</html>

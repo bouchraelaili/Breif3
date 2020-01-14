@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="Annotation.png" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+	<title>nous Travaux</title>
+	<style type="text/css">
+		body{background-color: white;
+
+		}
+		
+		
+		
+		
+		.sli{
+			float: left;
+		}
+		.sli a{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 40px;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		.sli a:hover:not(.active){
+			color: #3498db;
+
+		}
+		#btn-cnx{
+			background-color: #333;
+			border-color: #333;
+			padding: 8px 80px;
+			float: right;
+			margin: 20px;
+			margin: 4% 9%;
+		}
+		.h1{
+			color: white;
+		}
+		#div-div{
+			position: absolute;
+			margin-top: 100px;
+			/*left: 2% ;*/
+			/*margin-right: 10%;*/
+			
+			
+
+		}
+		#div-all{
+			display: flex;
+			justify-content: center;
+			/*flex-wrap: wrap-reverse;*/
+			flex-flow: row wrap;
+		}
+		
+		.content-div{
+		margin: 2%;
+
+			/*padding-bottom: 0px;*/
+			/*background-color: #2f3640;*/
+			/*background-image: linear-gradient(97deg,#0be881,#f53b57);*/
+			width: 300px;
+			height: 410px;
+			/*margin-left: 6%;*/
+			text-align: center;
+			box-shadow:  0 0 1em #ced6e0;
+			border-radius: 10px;
+			color:black;
+			/*background-color: #2c3e50;*/
+			background-color: white;
+			font-family: poppins;
+
+		}
+		.content-div:hover{
+			
+			box-shadow:  0 0 5em #D0F3F3!important;
+		}
+
+		/*Aussi */
+@media screen and (max-width: 767px){
+			#div-global{
+				display: list-item !important;
+
+			}
+			#content-div1{
+				width: 90% !important;
+				margin: -12px;
+				padding-left: 25px;
+
+
+			}
+			#content-div2{
+				width: 90% !important;
+				padding-left: 20px;
+
+			}
+			#div-name1{
+				display: list-item !important;	
+			}
+			#div-name1-div1{
+				width: 100% !important;
+
+			}
+			#div-name1-div2{
+				width: 100% !important;
+			}
+			#name-t{
+				width: 99% !important;
+			}
+			#prenom-t{
+				width: 99% !important;
+			}
+			.div1{
+				font-size: 0.7em !important;
+				left: 15% !important;
+			}
+
+			.button1{
+				width: 99% !important;
+			}
+		/*************menu mobile************************/
+			#s1{
+				display: block;
+			}
+			#div-btn-img{
+				display: block;
+			}
+
+			
+		}
+		
+		@media screen and (max-width: 1060px){
+			#div-all1{
+				display: none;
+			}
+			#div-all-header{
+				display: none;
+			}
+		}
+		
+
+		@media screen and (min-width: 1060px){
+			#s1{
+				display: none !important;
+			}
+			#div-btn-img{
+				display: none !important;
+			}
+			#divmenu{
+				display: none !important;
+			}
+
+
+		}
+
+
+.limenumobil{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	
+    padding-left: 7%;
+	text-align: left;
+
+}
+.limenumobil a p{
+	
+	font-family: Poppins Regular;
+	color: #707070;
+	width: 100%;
+
+	
+}
+.limenumobil a:hover p{
+	background-color: #38ADA9;;
+}
+
+
+
+a {
+	text-decoration: none !important;
+	font-size: 10px !important;
+}
+/**************fin menu mobile*************/
+		
+
+	
+    	
+
+	</style>
+	<script>
+		// menu mobile
+ 	function menu(){
+ 		var m = document.getElementById('divmenu');
+ 		
+ 		if (m.style.display=="none") {
+ 			m.style.display="block";
+ 		}
+ 		else if (m.style.display=="block"){
+ 			m.style.display="none";
+ 		}
+ 		
+ 	}
+ 	function show() {
+    var mobileMenu = document.getElementById("mobile-menu");
+
+    if (mobileMenu.style.display == "block") {
+        mobileMenu.style.display = "none";
+        mobileMenu.classList.toggle("block");
+    }else {
+        mobileMenu.style.display = "block";
+        mobileMenu.classList.toggle("block");
+    }
+}
+	</script>
+</head>
+<!-- debut nav -->
+
+<body>
+   <!-- ************************menu debut ****************************************-->
+<header id="div-all-header">
+    <div class="header">
+        <p style="margin: 0px;display: inline;font-size: 12px;">Bienvenue dans notre entreprise de nettoyage</p>
+        <p class="p2" style="margin: 0px;display: inline; float: right;font-size: 12px;">Phone: <span>+1 342 422 9029</span> Email: <span>SalahNaoufalBouchra@company.com</span></p>
+    </div>
+</header>
+<body>
+    <div id="div-all1">
+        <div>
+            <img class="fakeimg1" src="Annotation.png">
+            <ul class="nav" id="myTopnav">
+                <a href="CleaneLifeHome.html">Accueil</a>
+                <a href="About us.html">à propos de nous</a>
+                <a href="services.html">Services</a>
+                <a class="active" href="our works.html">Nos Travaux</a>
+                <a href="pricing.html">Prix</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+              <a href="reservation.html">  <button class="btn1">Demander un devis</button></a>
+            </ul>
+          
+        </div>
+    </div>
+ <section id="s1">
+ 	<div>
+ 		<center>
+ 			<p style="font-size: 10px;color: #707070;">Bienvenue dans notre entreprise de nettoyage</p>
+ 		</center>
+ 	</div>
+ 	<div style="display: flex;justify-content: space-between;  font-size: 10px;">
+ 		<p  style="padding-left: 15px; color: #707070;">Phone: <span style="color: #38ADA9;">+1 342 422 9029</span></p>
+ 		<p style="color: #707070;">Email: <span style="color: #38ADA9;">SalahNaoufalBouchra@company.com</span></p>
+ 	</div>
+ </section>
+ <section id="s2">
+ 	<div>
+ 		<div id="div-btn-img" style="display: flex;justify-content: space-between;">
+ 			<div>
+ 				<img class="fakeimg1" src="Annotation.png" style="width: 70px;height: 40px; float: left;position: absolute;">
+ 			</div>
+ 			<div>
+ 				
+ 				<a href="#" onclick="menu()" class="menu-icon" style="text-decoration: none;padding: 5px 10px; font-size: 16px !important;color:#707070; "> Menu  <i class="fa fa-bars"> </i></a>
+
+ 			</div>
+ 		</div>
+ 		<div id="divmenu" style="display: none;background-color: #FAFAFA">
+ 			<center>
+ 			<ul >
+		 		<li class="limenumobil" ><a href="CleaneLifeHome.html"><p>Accueil</p></a></li>
+		 		<li class="limenumobil" ><a href="About us.html"><p>à propos de nous</p></a></li>
+		 		<li class="limenumobil" ><a href="services.html"><p>Services</p></a></li>
+		 		<li class="limenumobil" ><a href="our works.html"><p>Nos Travaux</p></a></li>
+		 		<li class="limenumobil" ><a href="pricing.html"><p>Prix</p></a></li>
+		 		<li class="limenumobil" ><a href="blog.html"><p>Blog</p></a></li>
+		 		<li class="limenumobil" ><a href="contact.html"><p>Contact</p></a></li>
+		 		<li class="limenumobil" ><a href="reservation.html"><p>Demander un devis</p></a></li>
+		 	</ul>
+		 	</center>
+ 		</div>
+ 	</div>
+ </section>
+	<!--  ****************************fin menu**************************************  -->
+
+<body>
+
+
+	       <div style="background-color:#FAFAFA;width: 100%;height: 120px;display: flex !important;justify-content: center; margin-top: 1%;">
+	<p style="font-size: 35px;font-family:satisfait;text-align: center;font-weight:bold;color: #38ADA9;">Nos Travaux</p>
+</div>
+	
+	<div id="div-div">
+			
+		<div id="div-all">
+			<div class="content-div" style="">
+				<div style="">
+					<img src="menage-domicile-06-antibes-cannes-nice-11.jpg" width="100%" style="border-radius: 10px 10px 0px 0px;">
+				</div>
+				<div class="s-div-h1" style="background-color: #38ADA9; color:white;">
+					<h4 style="margin-top: 0px;padding-top: 8px;padding-bottom: 8px;text-transform: uppercase;font-family:italic;color: white;">Nettoyage des vitres</h4>
+				</div>
+				
+				<div style="float: center; line-height: 10px;font-size: 14px;">
+					<p>Réservez un spécialiste pour le lavage </p>
+					<p >de vitres: intérieur et extérieur, aspirateur</p>
+					<p > dans les rails de fenêtres, nettoyage </p>
+					<p>de cadrages et élimination des </p>
+					<p>nids araignées.</p>
+			 
+				</div>
+				
+				<!-- <div>
+					<br><br><br><br><br><br><br><br><br><br><a href="#" class="btn-div" style="text-decoration: none;background-image: linear-gradient(97deg,#d35400,#8e44ad);font-size: 20px;padding: 15px 50px;float: left; margin-left: 15px;border-radius: 20px;color: white;">détails</a>
+				</div>	 -->
+			</div>
+			<div class="content-div">
+				<div >
+					<img src="shutterstock_1112065637.png" width="100%" style="border-radius: 10px 10px 0px 0px;">
+				</div>
+				<div class="s-div-h1" style="background-color: #38ADA9; color:white;">
+					<h4 style="margin-top: 0px;padding-top: 8px;padding-bottom: 8px;text-transform: uppercase;font-family:italic;color: white;">Grand Menage</h4>
+				</div>
+				
+				<div style="float:center; line-height: 10px;font-size: 14px;">
+					<p>Le Grand ménage est</p>
+					<p >un nettoyage qui devrait être fait une</p>
+					<p >à deux fois par année.  </p>
+					<p>Cela implique de nettoyer les zones que </p>
+					<p>vous ne touchez généralement pas. </p>
+					
+ 
+ 
+
+ 
+			 
+				</div>
+				
+				<!-- <div>
+					<br><br><br><br><br><br><br><br><br><br><a href="#" class="btn-div" style="text-decoration: none;background-image: linear-gradient(97deg,#d35400,#8e44ad);font-size: 20px;padding: 15px 50px;float: left; margin-left: 15px;border-radius: 20px;color: white;">détails</a>
+				</div> -->
+			</div>
+			<div class="content-div">
+				<div>
+					<img src="Repassage-et-ménage-1.jpg" width="100%" style="border-radius: 10px 10px 0px 0px;">
+				</div>
+				<div class="s-div-h1" style="background-color: #38ADA9; color:white;">
+					<h4 style="margin-top: 0px;padding-top: 8px;padding-bottom: 8px;text-transform: uppercase;font-family:italic;color: white;">Ménage et repassage</h4>
+				</div>
+				
+				<div style="float: center; line-height: 10px;font-size: 14px;">
+					<p>Garder votre maison impeccable  </p>
+					<p >est plus facile et abord abèque </p>
+					<p >jamais avec nous Choisissez la </p>
+					<p> fréquence qui correspond à vos horaires  </p>
+					<p>et vous pouvez vous détendre </p>
+					<p>nettoyée au  moment demandé.</p>
+
+ 
+  
+
+
+
+			 
+				</div>
+				<!-- <div>
+					<br><br><br><br><br><br><br><br><br><br><a href="#" class="btn-div" style="text-decoration: none;background-image: linear-gradient(97deg,#d35400,#8e44ad);font-size: 20px;padding: 15px 50px;float: left; margin-left: 15px;border-radius: 20px;color: white;">détails</a>
+				</div> -->
+			</div>
+			<div class="content-div">
+				<div style="">
+					<img src="nettoyage-de-bureau_Rabat.jpg" width="100%" style="border-radius: 10px 10px 0px 0px;">
+				</div>
+				<div class="s-div-h1"style="background-color: #38ADA9; color:white;">
+					<h4 style="margin-top: 0px;padding-top: 8px;padding-bottom: 8px;text-transform: uppercase;font-family:italic;color: white;">Nettoyage des bureaux</h4>
+				</div>
+				
+				<div style="float: center; line-height: 10px;font-size: 14px;">
+					<p>Garder votre bureau ou cabinet </p>
+					<p >impeccable est plus facile et </p>
+					<p >abordable que jamais avec nous. </p>
+					<p> Choisissez la fréquence  qui correspond</p>
+					<p> à vos horaires et vous pouvez  </p>
+					<p> détendre votre bureau sera nettoyé. </p>
+					
+					
+ 
+				</div>
+				
+				<!-- <div>
+					<br><br><br><br><br><br><br><br><br><br><a href="#" class="btn-div" style="text-decoration: none;background-image: linear-gradient(97deg,#d35400,#8e44ad);font-size: 20px;padding: 15px 50px;float: left; margin-left: 15px;border-radius: 20px;color: white;">détails</a>
+				</div>	 -->	
+			</div>
+			<div class="content-div">
+				<div style="">
+					<img src="shutterstock_1005651637.png" width="100%" style="border-radius: 10px 10px 0px 0px;">
+				</div>
+				<div class="s-div-h1" style="background-color: #38ADA9; color:white;">
+					<h4 style="margin-top: 0px;padding-top: 8px;padding-bottom: 8px;text-transform: uppercase;font-family:italic;color: white;">Ménage Après Travaux</h4>
+				</div>
+			<div style="float:center; line-height: 10px;font-size: 14px;">
+					<p>	Dépoussiérage des surfaces</p>
+					<p >Lavage des sols ,Cirage </p>
+					<p >des parquets Nettoyage et détachage </p>
+					<p>des moquettes et tapis Nettoyage</p>
+					<p> des vitres, fenêtres, baies vitrées.</p>
+
+				</div>
+				
+				
+				<!-- <div>
+					<br><br><br><br><br><br><br><br><br><br><a href="#" class="btn-div" style="text-decoration: none;background-image: linear-gradient(97deg,#d35400,#8e44ad);font-size: 20px;padding: 15px 50px;float: left; margin-left: 15px;border-radius: 20px;color: white;">détails</a>
+				</div> -->
+			</div>
+			<div class="content-div">
+				<div style="">
+					<img src="shutterstock_736138987.png" width="100%" style="border-radius: 10px 10px 0px 0px;">
+				</div>
+				<div class="s-div-h1"style="background-color: #38ADA9;color:white;">
+					<h4 style="margin-top: 0px;padding-top: 8px;padding-bottom: 8px;text-transform: uppercase;font-family:italic;color: white;">Nettoyage des surfaces</h4>
+				</div>
+				
+				<div style="float: center; line-height: 10px;font-size: 14px;">
+					<p>Aspiration des sols, moquettes </p>
+					<p >et tapis Nettoyage des sols </p>
+					<p >et parquets vitrifiés Cirage  </p>
+					<p>des parquets Dépoussiérage</p>
+					<p> des escaliers</p>
+			 
+				</div>
+				
+				
+			</div>
+
+		</div>
+    <!-- footer -->
+	<div class="ft" style="margin-top: 100mm;">
+		<ul class="demo">
+			<h4>Aperçu rapide</h4>
+			<li><a href="CleaneLifeHome.html">Accueil</a></li>
+			<li><a href="About us.html">à propos de nous</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="our works.html">Nos Travaux</a></li>
+			<li><a href="pricing.html">Prix</a></li>
+			<li><a href="blog.html">Blogger</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<ul class="demo">
+			<h4>Services</h4>
+			<li><a href="services.html">Lavage des Lavabos</a></li>
+			<li><a href="services.html">Nettoyage des facades des ÉLements de cuisine</a></li>
+			<li><a href="services.html">Nettoyage de L'evier</a></li>
+			<li><a href="services.html">Nettoyage et désinfection des sanitaires</a></li>
+			<li><a href="services.html">Nettoyage du plan de travail</a></li>
+			<li><a href="services.html">Changement des serviettes de toilette</a></li>
+		</ul>
+		<ul class="demo">
+			<h4>Contacter Nous</h4>
+			<li>Télé: +212 614200838</li>
+			<li>Email: SalahNaoufalBouchra@company.com</li>
+			<li>Fax: +212 514200838</li>
+			<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/home" class="fa fa-twitter"></a>
+			<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+			<a href="https://www.linkedin.com/uas/login?trk=reset_password" class="fa fa-linkedin"></a>
+			<a href="https://www.youtube.com/results?search_query=hassan+boufaa" class="fa fa-youtube"></a>
+		</ul>
+	</div>
+	<!-- fin footer -->
+	</div>
+	
+</body>
+</html>
