@@ -357,7 +357,7 @@ width: 100%;
 
 }
 .limenumobil a:hover p{
-color: #38ADA9;;
+background-color: #38ADA9;;
 }
 
 
@@ -373,27 +373,27 @@ font-size: 10px !important;
   margin-top: 10px;
 }
 .part1 img{
-  width: 105%;
+  width: 100%;
   height: auto;
   margin-left: -5px;
 }
 .part1 .opac{
   background-color: black;
   position: absolute;
-  width: 100%;
+  width: 99.5%;
   margin-left: -9px;
-  height: 625px;
+  height: 97.5%;
   opacity: 30%;
 }
 .part1 .cont{
   display: flex;
   position: absolute;
-  margin-top: 60px;
+  margin-top: 10%;
   color: #fff;
   font-family: 'Satisfy';
   font-size: 30px;
   text-align: center;
-  margin-left: 13%;
+  margin-left: 27%;
 }
 .part1 .cont h5{
   display: flex;
@@ -410,7 +410,8 @@ font-size: 10px !important;
   position: absolute;
   margin-top: 400px;
   color: #38ADA9;
-  font-family: 'Satisfy';
+  font-family: 'Poppins Medium';
+  font-size: 15px !important;
   text-align: center;
   margin-left: 40%;
   border-radius: 25px;
@@ -443,8 +444,9 @@ font-size: 10px !important;
     font-family: 'Satisfy';
     font-size: 20px;
     text-align: center;
-    margin-left: 1%;
+    margin-left: 4%;
   }
+
   .part1 .cont h5{
     display: flex;
     position: absolute;
@@ -453,16 +455,16 @@ font-size: 10px !important;
     font-family: 'Satisfy';
     font-size: 20px;
     text-align: center;
-    margin-left: 1%;
+
   }
   .part1 .cont a{
     display: flex;
     position: absolute;
     margin-top: 320px;
     color: #38ADA9;
-    font-family: 'Satisfy';
+    font-family: 'Poppins Medium';
     text-align: center;
-    margin-left: 34%;
+    margin-left: 40%;
     border-radius: 25px;
     background-color: white;
     padding-left: 30px;
@@ -561,10 +563,10 @@ width: 280px;
 	align-items: center;
 	flex-wrap: wrap;
 }
-@media (max-width:700px){
+@media screen and (max-width:700px){
   .cnt {
     width: 100%;
-    height: 400px;
+    height: 250px;
     background-color: #38ADA9;
     margin-top: 50px;
     display: flex;
@@ -572,6 +574,23 @@ width: 280px;
     align-items: center;
     flex-wrap: wrap;
   }
+  #A {
+   font-size: 15px !important;
+   margin-top: -13%;
+   margin-left: 10px;
+  }
+  
+  .cnt span {
+     height: 40px;
+     width: 130px;
+     background-color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 35px;
+     margin-top: -10% !important;
+     margin-left: 3% !important;
+   }
 }
 
 
@@ -591,7 +610,7 @@ width: 280px;
  	align-items: center;
  	justify-content: center;
    border-radius: 35px;
-   margin-top: -3%;
+   margin-top: -2%;
    margin-left: -15%;
  }
 
